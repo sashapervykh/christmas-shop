@@ -1,20 +1,26 @@
 a {
   text-decoration: none;
+  color: #181c29;
+}
+
+li {
+  list-style: none;
 }
 
 header {
   width: 1440px;
-  height: 64px;
+
   margin: 0 auto;
 }
 
 .header_wrapper {
+  display: flex;
   width: 1276px;
   margin: 12px auto;
 }
 
 .wrapper__logo {
-  display: inline-flex;
+  display: flex;
   padding: 8px 20px;
 }
 
@@ -40,7 +46,16 @@ header {
   color: #181c29;
 }
 
-.link {
+nav {
+  display: flex;
+  margin-left: auto;
+  margin-right: 0px;
+  justify-content: space-between;
+  width: 376px;
+}
+
+.menu-item {
+  padding: 12px 20px;
 }
 
 main {
