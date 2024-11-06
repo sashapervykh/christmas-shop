@@ -1,0 +1,17 @@
+nav {
+  width: 1440px;
+  height: 64px;
+  margin: 0 auto;
+}
+main {
+  width: 1440px;
+  height: fit-content;
+  margin: 0 auto;
+  background-color: #ff4646;
+  font-size: 90px;
+}
+footer {
+  width: 1440px;
+
+  margin: 0 auto;
+}
