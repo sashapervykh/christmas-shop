@@ -1,17 +1,56 @@
-nav {
+a {
+  text-decoration: none;
+}
+
+header {
   width: 1440px;
   height: 64px;
   margin: 0 auto;
 }
+
+.header_wrapper {
+  width: 1276px;
+  margin: 12px auto;
+}
+
+.wrapper__logo {
+  display: inline-flex;
+  padding: 8px 20px;
+}
+
+.logo-img {
+  width: 24px;
+  height: 24px;
+  background-image: url(/christmas-shop/assets/svg/snowflake.svg);
+}
+
+.logo-txt {
+  display: flex;
+  margin-top: 4px;
+  margin-left: 9px;
+}
+
+.small-font {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: #181c29;
+}
+
+.link {
+}
+
 main {
   width: 1440px;
-  height: fit-content;
+  height: 100px;
   margin: 0 auto;
   background-color: #ff4646;
   font-size: 90px;
 }
 footer {
   width: 1440px;
-
   margin: 0 auto;
 }
