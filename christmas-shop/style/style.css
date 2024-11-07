@@ -9,7 +9,6 @@ li {
 
 header {
   width: 1440px;
-
   margin: 0 auto;
 }
 
@@ -60,11 +59,74 @@ nav {
 
 main {
   width: 1440px;
-  height: 100px;
   margin: 0 auto;
   background-color: #ff4646;
-  font-size: 90px;
+  border-radius: 20px;
 }
+
+.about-wrapper {
+  padding: 60px 8px;
+  height: 524px;
+  background-image: url(../assets/png/snow.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0px -40px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 426px;
+  padding: 60px 0px;
+  margin: 0px auto;
+  justify-content: center;
+}
+
+.white-txt {
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
+}
+
+.caption {
+  font-family: Allura;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.07rem;
+}
+
+.top-caption {
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+
+.about-title {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.explore {
+  width: 235px;
+  height: 56px;
+  margin: 0px auto;
+  border: none;
+  border-radius: 20px;
+  background-color: #181c29;
+}
+
+.bottom-caption {
+  margin-top: 15px;
+}
+
 footer {
   width: 1440px;
   margin: 0 auto;
