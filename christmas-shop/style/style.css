@@ -185,11 +185,16 @@ h2 {
 }
 
 .slider-section_wrapper {
-  padding: 40px 0px;
+  padding: 60px 0px;
+}
+
+.slider-caption {
+  margin-top: 5px;
 }
 
 .slider-header {
-  margin-top: 5px;
+  margin-top: 16px;
+  margin-left: 2px;
   text-align: center;
   color: white;
 }
