@@ -7,6 +7,10 @@ li {
   list-style: none;
 }
 
+p {
+  margin: 0px;
+}
+
 header {
   width: 1440px;
   margin: 0 auto;
@@ -155,6 +159,7 @@ h1 {
 
 .about-title {
   margin-top: 5px;
+  margin-bottom: 25px;
   color: #ff4646;
 }
 
@@ -165,6 +170,7 @@ h2 {
   line-height: 152%;
   letter-spacing: 0.24rem;
   text-transform: uppercase;
+  margin: 0px;
 }
 
 .main-text-font {
@@ -172,6 +178,20 @@ h2 {
   font-size: 16px;
   font-weight: 400;
   line-height: 148%;
+}
+
+.about-main {
+  margin-top: 18px;
+}
+
+.slider-section_wrapper {
+  padding: 40px 0px;
+}
+
+.slider-header {
+  margin-top: 5px;
+  text-align: center;
+  color: white;
 }
 
 footer {
