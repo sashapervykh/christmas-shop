@@ -127,6 +127,7 @@ h1 {
 
 .about-wrapper {
   padding: 60px 8px;
+  background: url(../assets/png/snow.png) no-repeat -55px 0px/108%;
 }
 
 .about-content {
