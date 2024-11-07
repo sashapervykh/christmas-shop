@@ -125,6 +125,25 @@ h1 {
   margin-top: 15px;
 }
 
+.about-wrapper {
+  padding: 60px 8px;
+}
+
+.about-content {
+  display: flex;
+  margin: 0px auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  max-width: 1276px;
+}
+
+.about-image {
+  display: block;
+  height: 528px;
+  width: 638px;
+  border-radius: 20px;
+}
+
 footer {
   width: 1440px;
   margin: 0 auto;
