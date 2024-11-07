@@ -186,6 +186,7 @@ h2 {
 
 .slider-section_wrapper {
   padding: 60px 0px;
+  overflow: hidden;
 }
 
 .slider-caption {
@@ -197,6 +198,37 @@ h2 {
   margin-left: 2px;
   text-align: center;
   color: white;
+}
+
+.slider-container {
+  display: flex;
+  width: 1276px;
+  height: 200px;
+  margin-left: 82px;
+  margin-top: 20px;
+}
+
+.slider-item {
+  margin: auto 21px auto 0px;
+}
+
+.slider-text {
+  font-family: Montserrat;
+  font-size: 80px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.slider-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.third {
+  margin-left: -2px;
 }
 
 footer {
