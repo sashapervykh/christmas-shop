@@ -64,14 +64,14 @@ main {
   border-radius: 20px;
 }
 
-.about-wrapper {
+.hero-wrapper {
   padding: 60px 8px;
   height: 524px;
   background: url(../assets/png/snow.png) no-repeat center/100%,
     url(../assets/png/bg-ball.png) no-repeat center/100%;
 }
 
-.about-content {
+.hero-content {
   display: flex;
   flex-direction: column;
   max-width: 426px;
@@ -107,7 +107,7 @@ h1 {
   margin-bottom: 0px;
 }
 
-.about-title {
+.hero-title {
   margin-top: 18px;
   margin-bottom: 10px;
 }
