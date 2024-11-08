@@ -277,6 +277,36 @@ h2 {
   transition: 0.5s;
 }
 
+.gifts {
+  padding: 60px 8px;
+}
+
+.gift-caption {
+  margin-top: 3px;
+}
+
+.gift-head {
+  margin-top: 18px;
+  margin-left: 2px;
+}
+
+.gifts-box {
+  display: flex;
+  width: 1276px;
+}
+
+.gift {
+  display: flex;
+  border-radius: 20px;
+  width: 310px;
+  height: 342px;
+}
+
+.gift-img {
+  background-color: #ecf3f8;
+  height: 230px;
+}
+
 footer {
   width: 1440px;
   margin: 0 auto;
