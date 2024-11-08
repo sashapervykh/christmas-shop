@@ -184,6 +184,10 @@ h2 {
   margin-top: 18px;
 }
 
+.slider-section {
+  background: url(../assets/png/snow.png) no-repeat center/100%;
+}
+
 .slider-section_wrapper {
   padding: 60px 0px;
   overflow: hidden;
