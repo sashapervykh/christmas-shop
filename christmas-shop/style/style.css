@@ -314,6 +314,54 @@ h2 {
   height: 230px;
 }
 
+h3 {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+h4 {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 132%;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.health-color {
+  color: #06a44f;
+}
+
+.harmony-color {
+  color: #ff43f7;
+}
+
+.work-color {
+  color: #4361ff;
+}
+
+.gift-text {
+  background-color: white;
+  border-radius: 20px;
+  height: 230px;
+}
+
+.gift-category {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.gift-title {
+  margin-top: 8px;
+  margin-left: 20px;
+}
+
 footer {
   width: 1440px;
   margin: 0 auto;
