@@ -279,6 +279,7 @@ h2 {
 
 .gifts {
   padding: 60px 8px;
+  background: url(../assets/png/snow.png) no-repeat center/100%;
 }
 
 .gift-caption {
@@ -293,17 +294,23 @@ h2 {
 .gifts-box {
   display: flex;
   width: 1276px;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 18px;
 }
 
 .gift {
   display: flex;
+  flex-direction: column;
   border-radius: 20px;
   width: 310px;
   height: 342px;
+  overflow: hidden;
+  background-color: #ecf3f8;
 }
 
 .gift-img {
-  background-color: #ecf3f8;
+  width: inherit;
   height: 230px;
 }
 
