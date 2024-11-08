@@ -448,4 +448,79 @@ h4 {
 footer {
   width: 1440px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  display: flex;
+  width: 1276px;
+  height: 204px;
+  justify-content: space-between;
+  margin: 60px auto 0px auto;
+}
+
+.contact {
+  width: 417.33px;
+  background-color: #ecf3f8;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cont-image_wrapper {
+  display: flex;
+}
+
+.contact-image {
+  margin: 20px auto 12px auto;
+}
+
+.contact-text {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+  margin: 0px auto;
+}
+.contact-call {
+  margin: 10px auto;
+}
+
+.copyright {
+  margin: 0px auto;
+}
+
+.icons {
+  width: 196px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 68px auto 0px auto;
+  padding-left: 10px;
+}
+
+.icon-wrapper {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.telegram {
+  margin-top: 4px;
+}
+
+.instagram {
+  margin-left: 4px;
+}
+
+.twitter {
+  margin-left: 8px;
+}
+
+.RS-School {
+  margin: 0px auto;
 }
