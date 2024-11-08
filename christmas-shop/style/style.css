@@ -231,6 +231,48 @@ h2 {
   margin-left: -2px;
 }
 
+.slider-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 20px auto 0px auto;
+  width: 1276px;
+}
+
+.slider-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  margin-left: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  vertical-align: middle;
+}
+
+.chosen {
+  border: 1px solid rgba(255, 255, 255);
+  pointer-events: none;
+}
+
+.chosen > .arrow {
+  stroke-opacity: 1;
+}
+
+.arrow {
+  display: block;
+  margin: 21px auto;
+  stroke-opacity: 0.4;
+}
+
+.slider-button:hover {
+  border: 1px solid rgba(255, 255, 255);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.slider-button:hover > .arrow {
+  stroke-opacity: 1;
+  transition: 0.5s;
+}
+
 footer {
   width: 1440px;
   margin: 0 auto;
