@@ -362,6 +362,87 @@ h4 {
   margin-left: 20px;
 }
 
+.timer-section {
+  padding: 60px 8px;
+}
+
+.timer-sect-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 426px;
+  margin: 120px auto;
+}
+
+.timer-button {
+  margin: 18px auto;
+}
+
+.timer-caption {
+  margin-top: 6px;
+}
+
+.timer {
+  width: 344px;
+  height: 72px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 13px auto;
+  display: flex;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  display: flex;
+  flex-direction: column;
+  width: 79px;
+  height: 52px;
+  margin-top: 8px;
+}
+
+.days {
+  margin-left: 12px;
+}
+
+.line {
+  height: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.days-number,
+.hour-number,
+.min-number,
+.sec-number {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+  margin: auto;
+  color: white;
+  text-align: center;
+}
+
+.days-text,
+.hour-text,
+.min-text,
+.sec-text {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 132%;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin: 0px;
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
 footer {
   width: 1440px;
   margin: 0 auto;
