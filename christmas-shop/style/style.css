@@ -489,10 +489,6 @@ footer {
   margin: 10px auto;
 }
 
-.copyright {
-  margin: 0px auto;
-}
-
 .icons {
   width: 196px;
   height: 40px;
@@ -521,6 +517,10 @@ footer {
   margin-left: 8px;
 }
 
+.copyright {
+  margin: 5px auto;
+}
+
 .RS-School {
-  margin: 0px auto;
+  margin: 10px auto;
 }
