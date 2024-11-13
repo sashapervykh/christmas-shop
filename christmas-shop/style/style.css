@@ -489,6 +489,11 @@ footer {
   margin: 10px auto;
 }
 
+.phone-number {
+  padding-left: 3px;
+  padding-top: 3px;
+}
+
 .icons {
   width: 196px;
   height: 40px;
