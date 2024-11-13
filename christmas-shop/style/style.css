@@ -30,7 +30,7 @@ header {
 .logo-img {
   width: 24px;
   height: 24px;
-  background-image: url(/christmas-shop/assets/svg/snowflake.svg);
+  background-image: url(../assets/svg/snowflake.svg);
 }
 
 .logo-txt {
