@@ -17,10 +17,6 @@ header {
   margin: 0 auto;
 }
 
-body {
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
 .header_wrapper {
   display: flex;
   width: 1276px;
@@ -143,6 +139,7 @@ h1 {
   background-color: #ffffff;
   color: #181c29;
   transition: 0.5s;
+  cursor: url(../assets/png/cursor.png), auto;
 }
 
 .bottom-caption {
@@ -271,9 +268,16 @@ h2 {
   vertical-align: middle;
 }
 
+.slider-button > .arrow {
+  stroke: white;
+}
+
+.inactive {
+  pointer-events: none;
+}
+
 .chosen {
   border: 1px solid rgba(255, 255, 255);
-  pointer-events: none;
 }
 
 .chosen > .arrow {
@@ -287,13 +291,14 @@ h2 {
 }
 
 .slider-button:hover {
-  border: 1px solid rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255);
   transition: 0.5s;
   cursor: url(../assets/png/cursor.png), auto;
 }
 
 .slider-button:hover > .arrow {
   stroke-opacity: 1;
+  stroke: rgb(255 70 70);
   transition: 0.5s;
 }
 
