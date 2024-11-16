@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: #181c29;
@@ -565,6 +569,21 @@ footer {
   margin: 5px auto;
 }
 
+.icon {
+  stroke: rgb(24 28 41);
+  transition: 0.5s;
+}
+
+.icon:hover {
+  stroke: rgb(255 70 70);
+  transition: 0.5s;
+}
+
 .RS-School {
   margin: 10px auto;
+}
+
+.RS-School:hover {
+  color: #ff4646;
+  transition: 0.5s;
 }
