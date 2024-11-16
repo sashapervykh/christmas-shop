@@ -74,6 +74,13 @@ nav {
   transition: 0.5s;
 }
 
+.menu-item__inactive {
+  color: #ff4646;
+  background-color: rgba(255, 46, 46, 0.1);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
 main {
   width: 1440px;
   margin: 0 auto;
