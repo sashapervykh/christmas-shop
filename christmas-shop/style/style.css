@@ -502,6 +502,11 @@ footer {
   flex-direction: column;
 }
 
+.contact:hover {
+  color: #ff4646;
+  transition: 0.5s;
+}
+
 .cont-image_wrapper {
   display: flex;
 }
