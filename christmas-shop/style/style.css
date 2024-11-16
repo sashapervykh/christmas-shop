@@ -139,6 +139,11 @@ h1 {
   transition: 0.5s;
 }
 
+.explore-link {
+  display: flex;
+  width: inherit;
+}
+
 .explore:hover {
   background-color: #ffffff;
   color: #181c29;
