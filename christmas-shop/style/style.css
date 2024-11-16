@@ -1,6 +1,7 @@
 a {
   text-decoration: none;
   color: #181c29;
+  cursor: url(../assets/png/cursor.png), auto;
 }
 
 li {
@@ -14,6 +15,10 @@ p {
 header {
   width: 1440px;
   margin: 0 auto;
+}
+
+body {
+  cursor: url(../assets/png/cursor.png), auto;
 }
 
 .header_wrapper {
@@ -131,6 +136,13 @@ h1 {
   border: none;
   border-radius: 20px;
   background-color: #181c29;
+  transition: 0.5s;
+}
+
+.explore:hover {
+  background-color: #ffffff;
+  color: #181c29;
+  transition: 0.5s;
 }
 
 .bottom-caption {
@@ -277,7 +289,7 @@ h2 {
 .slider-button:hover {
   border: 1px solid rgba(255, 255, 255);
   transition: 0.5s;
-  cursor: pointer;
+  cursor: url(../assets/png/cursor.png), auto;
 }
 
 .slider-button:hover > .arrow {
