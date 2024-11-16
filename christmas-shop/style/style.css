@@ -334,6 +334,15 @@ h2 {
   background-color: #ecf3f8;
 }
 
+.gift:hover {
+  cursor: url(../assets/png/cursor.png), auto;
+}
+
+.gift:hover > .gift-text > .gift-title {
+  color: #ff4646;
+  transition: 0.5s;
+}
+
 .gift-img {
   width: inherit;
   height: 230px;
