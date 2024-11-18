@@ -1,6 +1,9 @@
 .gifts-content {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-image: url(../assets/png/bg-garland.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .gifts-header {
@@ -19,9 +22,16 @@
   padding: 13px 19px;
 }
 
+.category:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  cursor: url(../assets/png/cursor.png), auto;
+}
+
 .category__active {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
+  pointer-events: none;
 }
 
 .gifts-grid {

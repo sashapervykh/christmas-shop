@@ -5,7 +5,7 @@ html {
 a {
   text-decoration: none;
   color: #181c29;
-  cursor: url(../assets/png/cursor.png), auto;
+  cursor: auto;
 }
 
 li {
@@ -30,6 +30,7 @@ header {
 .wrapper__logo {
   display: flex;
   padding: 8px 20px;
+  cursor: url(../assets/png/cursor.png), auto;
 }
 
 .logo-img {
@@ -72,6 +73,7 @@ nav {
   background-color: rgba(255, 46, 46, 0.1);
   border-radius: 12px;
   transition: 0.5s;
+  cursor: url(../assets/png/cursor.png), auto;
 }
 
 .menu-item__inactive {
@@ -79,6 +81,7 @@ nav {
   background-color: rgba(255, 46, 46, 0.1);
   border-radius: 12px;
   pointer-events: none;
+  cursor: none;
 }
 
 main {
@@ -521,6 +524,7 @@ footer {
 .contact:hover {
   color: #ff4646;
   transition: 0.5s;
+  cursor: url(../assets/png/cursor.png), auto;
 }
 
 .cont-image_wrapper {
@@ -589,6 +593,7 @@ footer {
 .icon:hover {
   stroke: rgb(255 70 70);
   transition: 0.5s;
+  cursor: url(../assets/png/cursor.png), auto;
 }
 
 .RS-School {
@@ -598,4 +603,5 @@ footer {
 .RS-School:hover {
   color: #ff4646;
   transition: 0.5s;
+  cursor: url(../assets/png/cursor.png), auto;
 }
