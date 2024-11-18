@@ -22,3 +22,13 @@
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
 }
+
+.gifts-grid {
+  display: grid;
+  width: fit-content;
+  margin: -1px auto 0px auto;
+  grid-template-columns: repeat(4, 310px);
+  grid-template-rows: repeat(4, 342px);
+  column-gap: 12px;
+  row-gap: 12px;
+}
