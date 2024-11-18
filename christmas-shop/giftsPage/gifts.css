@@ -6,3 +6,19 @@
   width: 426px;
   margin: 0px auto;
 }
+
+.categories {
+  display: flex;
+  width: 474px;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.category {
+  padding: 13px 19px;
+}
+
+.category__active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
