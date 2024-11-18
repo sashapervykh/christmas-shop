@@ -63,6 +63,14 @@ nav {
   width: 376px;
 }
 
+ul {
+  display: flex;
+  width: inherit;
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-between;
+}
+
 .menu-item {
   padding: 12px 20px;
   transition: 0.5s;
