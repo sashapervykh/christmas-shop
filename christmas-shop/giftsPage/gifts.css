@@ -20,12 +20,14 @@
 
 .category {
   padding: 13px 19px;
+  transition: 0.5s;
 }
 
 .category:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   cursor: url(../assets/png/cursor.png), auto;
+  transition: 0.5s;
 }
 
 .category__active {
