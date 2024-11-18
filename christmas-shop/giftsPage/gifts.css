@@ -1,3 +1,7 @@
+ul {
+  list-style: none;
+}
+
 .gifts-content {
   padding-top: 60px;
   padding-bottom: 60px;
