@@ -104,8 +104,6 @@ main {
 .hero-wrapper {
   padding: 60px 8px;
   height: 524px;
-  background: url(../assets/png/snow.png) no-repeat center/100%,
-    url(../assets/png/bg-ball.png) no-repeat center/100%;
 }
 
 .hero-content {

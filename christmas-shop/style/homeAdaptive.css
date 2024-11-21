@@ -1,0 +1,13 @@
+@media (min-width: 1380px) {
+  .hero-wrapper {
+    background: url(../assets/png/snow.png) no-repeat center/100%,
+      url(../assets/png/bg-ball.png) no-repeat center/100%;
+  }
+}
+
+@media (max-width: 1380px) {
+  .hero-wrapper {
+    background: url(../assets/png/snow.png) no-repeat center/162%,
+      url(../assets/png/bg-ball.png) no-repeat center/162%;
+  }
+}
