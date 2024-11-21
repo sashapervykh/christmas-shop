@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="style/modern-normalize.css" >
-    <link rel="stylesheet" href="style/style.css" >
-    <link rel="icon" href="assets/png/favicon.png" >
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/modern-normalize.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/adaptive.css" />
+    <link rel="icon" href="assets/png/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-   >
+    />
     <title>Christmas shop</title>
   </head>
   <body>
@@ -21,23 +22,27 @@
           <div class="logo-img"></div>
           <div class="logo-txt small-font">The Gifts</div>
         </a>
-        <nav class="small-font"> 
-          <ul>
-          <li>
-            <a href="giftsPage/gifts.html"
-              ><div class="menu-item">GIFTS</div></a
-            >
-          </li>
-          <li>
-            <a href="#about"><div class="menu-item">ABOUT</div></a>
-          </li>
-          <li>
-            <a href="#best"><div class="menu-item">BEST</div></a>
-          </li>
-          <li>
-            <a href="#footer"><div class="menu-item">CONTACTS</div></a>
-          </li>
-        </ul>
+        <nav class="small-font">
+          <div class="burger-btn">
+            <div class="burger-line line-one"></div>
+            <div class="burger-line line-two"></div>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <a href="giftsPage/gifts.html"
+                ><div class="menu-item">GIFTS</div></a
+              >
+            </li>
+            <li>
+              <a href="#about"><div class="menu-item">ABOUT</div></a>
+            </li>
+            <li>
+              <a href="#best"><div class="menu-item">BEST</div></a>
+            </li>
+            <li>
+              <a href="#footer"><div class="menu-item">CONTACTS</div></a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -46,11 +51,15 @@
         <div class="hero-content">
           <p class="top-caption caption white-txt">Merry Christmas</p>
           <h1 class="hero-title white-txt">
-            Gift yourself <br >
+            Gift yourself <br />
             the magic of new possibilities
           </h1>
-          <div class="explore  timer-button">
-            <a href="giftsPage/gifts.html" class="explore-link small-font white-txt">Explore Magical Gifts</a>
+          <div class="explore timer-button">
+            <a
+              href="giftsPage/gifts.html"
+              class="explore-link small-font white-txt"
+              >Explore Magical Gifts</a
+            >
           </div>
           <p class="bottom-caption caption white-txt">and Happy New Year</p>
         </div>
@@ -70,7 +79,7 @@
             src="./assets/png/santa.png"
             alt="santa and snowman image"
             class="about-image"
-          >
+          />
         </div>
       </section>
       <section class="slider-section">
@@ -84,7 +93,7 @@
                 class="slider-image"
                 src="./assets/png/snowman.png"
                 alt="snowman"
-              >
+              />
             </div>
             <div class="slider-item slider-text">create</div>
             <div class="slider-item">
@@ -92,7 +101,7 @@
                 class="slider-image"
                 src="./assets/png/christmas-trees.png"
                 alt="trees and candles"
-              >
+              />
             </div>
             <div class="slider-item slider-text">love</div>
             <div class="slider-item third">
@@ -100,7 +109,7 @@
                 class="slider-image"
                 src="./assets/png/christmas-tree-ball.png"
                 alt="Christmas ball"
-              >
+              />
             </div>
           </div>
           <div class="slider-buttons">
@@ -145,7 +154,7 @@
         <div class="gifts-box">
           <div class="gift">
             <div class="gift-img">
-              <img src="./assets/png/work.png" alt="present-box" >
+              <img src="./assets/png/work.png" alt="present-box" />
             </div>
             <div class="gift-text">
               <h4 class="gift-category work-color">For work</h4>
@@ -154,7 +163,7 @@
           </div>
           <div class="gift">
             <div class="gift-img">
-              <img src="./assets/png/health.png" alt="present-box" >
+              <img src="./assets/png/health.png" alt="present-box" />
             </div>
             <div class="gift-text">
               <h4 class="gift-category health-color">For health</h4>
@@ -163,7 +172,7 @@
           </div>
           <div class="gift">
             <div class="gift-img">
-              <img src="./assets/png/work.png" alt="present-box" >
+              <img src="./assets/png/work.png" alt="present-box" />
             </div>
             <div class="gift-text">
               <h4 class="gift-category work-color">For work</h4>
@@ -172,7 +181,7 @@
           </div>
           <div class="gift">
             <div class="gift-img">
-              <img src="./assets/png/harmony.png" alt="present-box" >
+              <img src="./assets/png/harmony.png" alt="present-box" />
             </div>
             <div class="gift-text">
               <h4 class="gift-category harmony-color">For harmony</h4>
@@ -187,7 +196,11 @@
             Ready to start your journey to a better version of yourself?
           </h2>
           <div class="explore timer-button">
-            <a href="giftsPage/gifts.html" class="explore-link small-font white-txt">Explore Magical Gifts</a>
+            <a
+              href="giftsPage/gifts.html"
+              class="explore-link small-font white-txt"
+              >Explore Magical Gifts</a
+            >
           </div>
           <p class="timer-caption white-txt caption">
             The New Year is Coming Soon...
@@ -224,7 +237,7 @@
               class="contact-image"
               src="./assets/png/Group.png"
               alt="Small Santa"
-            >
+            />
           </div>
           <div class="contact-text phone-number">+375 (29) 111-22-33</div>
           <h3 class="contact-call">Call Us</h3>
@@ -238,7 +251,7 @@
               class="contact-image"
               src="./assets/svg/christmas-tree.svg"
               alt="Tree"
-            >
+            />
           </div>
           <div class="contact-text">Magic forest</div>
           <h3 class="contact-call">meet us</h3></a
@@ -249,7 +262,7 @@
               class="contact-image"
               src="./assets/svg/snake.svg"
               alt="Snake"
-            >
+            />
           </div>
           <div class="contact-text">Gifts@magic.com</div>
           <h3 class="contact-call">write us</h3></a
