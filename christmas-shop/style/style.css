@@ -519,7 +519,7 @@ h4 {
 }
 
 footer {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -527,14 +527,10 @@ footer {
 
 .contacts {
   display: flex;
-  width: 1276px;
-  height: 204px;
-  justify-content: space-between;
   margin: 60px auto 0px auto;
 }
 
 .contact {
-  width: 417.33px;
   background-color: #ecf3f8;
   border-radius: 20px;
   display: flex;
@@ -579,7 +575,6 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 68px auto 0px auto;
   padding-left: 10px;
 }
 

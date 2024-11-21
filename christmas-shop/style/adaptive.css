@@ -1,3 +1,52 @@
+@media (min-width: 1336px) {
+  .contacts {
+    width: 1276px;
+    height: 204px;
+    justify-content: space-between;
+  }
+
+  .contact {
+    width: 417.33px;
+  }
+
+  .icons {
+    margin: 68px auto 0px auto;
+  }
+}
+
+@media (max-width: 1336px) {
+  .contacts {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-around;
+  }
+
+  .contact {
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .icons {
+    margin: 58px auto 0px auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .contacts {
+    margin-left: 8px;
+    margin-right: 8px;
+    flex-direction: column;
+  }
+
+  .contact {
+    width: 100%;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   nav {
     position: relative;
@@ -76,5 +125,19 @@
   .body-burger {
     overflow: hidden;
     height: 100%;
+  }
+
+  .phone-call {
+    padding-top: 2px;
+  }
+}
+
+@media (max-width: 500px) {
+  .map-title {
+    padding-left: 2px;
+  }
+
+  .map-call {
+    padding-top: 2px;
   }
 }
