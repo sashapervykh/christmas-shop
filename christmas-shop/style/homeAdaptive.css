@@ -1,13 +1,20 @@
 @media (min-width: 1380px) {
   .hero-wrapper {
-    background: url(../assets/png/snow.png) no-repeat center/100%,
-      url(../assets/png/bg-ball.png) no-repeat center/100%;
+    background: url(../assets/png/snow.png) no-repeat center/1440px,
+      url(../assets/png/bg-ball.png) no-repeat center/1440px;
   }
 }
 
 @media (max-width: 1380px) {
   .hero-wrapper {
-    background: url(../assets/png/snow.png) no-repeat center/162%,
-      url(../assets/png/bg-ball.png) no-repeat center/162%;
+    background: url(../assets/png/snow.png) no-repeat center/1244px,
+      url(../assets/png/bg-ball.png) no-repeat center/1244px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-wrapper {
+    background: url(../assets/png/snow.png) no-repeat 50% 0%/1360px,
+      url(../assets/png/bg-ball.png) no-repeat 50% 0%/1360px;
   }
 }
