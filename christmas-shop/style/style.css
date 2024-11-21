@@ -62,7 +62,6 @@ nav {
   margin-left: auto;
   margin-right: 0px;
   justify-content: space-between;
-  width: clamp(153px, auto, 376px);
 }
 
 ul {

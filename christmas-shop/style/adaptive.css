@@ -1,4 +1,8 @@
 @media (min-width: 1336px) {
+  nav {
+    width: 376px;
+  }
+
   .contacts {
     width: 1276px;
     height: 204px;
