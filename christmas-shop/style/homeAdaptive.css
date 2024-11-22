@@ -69,8 +69,10 @@
   }
 
   .about-image {
+    max-width: 628px;
     margin-left: auto;
     margin-right: 0px;
+    background-repeat: no-repeat;
   }
 
   .about-text {
