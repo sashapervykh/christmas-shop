@@ -136,6 +136,17 @@
     margin: 0px;
     padding: 105px 10px 0px 10px;
   }
+
+  .gifts-box {
+    width: 95%;
+  }
+}
+
+@media (max-width: 685px) {
+  .gifts-box {
+    width: 80%;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 634px) {
@@ -162,5 +173,17 @@
   .hero-wrapper {
     background: url(../assets/png/snow.png) no-repeat 50% 0%/1360px,
       url(../assets/png/bg-ball.png) no-repeat 50% 0%/1360px;
+  }
+
+  .gifts-box {
+    width: 100%;
+    margin-top: 5px;
+    padding-left: 27px;
+    padding-right: 27px;
+    justify-content: center;
+  }
+
+  .gift {
+    margin-top: 12px;
   }
 }
