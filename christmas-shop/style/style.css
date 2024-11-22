@@ -78,14 +78,6 @@ ul {
   transition: 0.5s;
 }
 
-.menu-item:hover {
-  color: #ff4646;
-  background-color: rgba(255, 46, 46, 0.1);
-  border-radius: 12px;
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
 .menu-item__inactive {
   color: #ff4646;
   background-color: rgba(255, 46, 46, 0.1);
@@ -165,18 +157,6 @@ h1 {
   padding-top: 20px;
   padding-left: 32px;
   letter-spacing: 0.04rem;
-}
-
-.explore:hover {
-  background-color: #ffffff;
-  color: #181c29;
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
-.explore:hover > .explore-link {
-  cursor: url(../assets/png/cursor.png), auto;
-  color: #181c29;
 }
 
 .bottom-caption {
@@ -311,18 +291,6 @@ h2 {
   stroke-opacity: 0.4;
 }
 
-.slider-button:hover {
-  background-color: rgba(255, 255, 255);
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
-.slider-button:hover > .arrow {
-  stroke-opacity: 1;
-  stroke: rgb(255 70 70);
-  transition: 0.5s;
-}
-
 .gifts {
   padding: 60px 8px;
   background: url(../assets/png/snow.png) no-repeat center/100%;
@@ -353,15 +321,6 @@ h2 {
   height: 342px;
   overflow: hidden;
   background-color: #ecf3f8;
-}
-
-.gift:hover {
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
-.gift:hover > .gift-text > .gift-title {
-  color: #ff4646;
-  transition: 0.5s;
 }
 
 .gift-img {
@@ -519,12 +478,6 @@ footer {
   flex-direction: column;
 }
 
-.contact:hover {
-  color: #ff4646;
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
 .cont-image_wrapper {
   display: flex;
 }
@@ -587,18 +540,6 @@ footer {
   transition: 0.5s;
 }
 
-.icon:hover {
-  stroke: rgb(255 70 70);
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
 .RS-School {
   margin: 10px auto 60px auto;
-}
-
-.RS-School:hover {
-  color: #ff4646;
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
 }

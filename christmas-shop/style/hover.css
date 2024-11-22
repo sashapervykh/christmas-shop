@@ -1,0 +1,69 @@
+@media (hover: hover) {
+  .menu-item:hover {
+    color: #ff4646;
+    background-color: rgba(255, 46, 46, 0.1);
+    border-radius: 12px;
+    transition: 0.5s;
+    cursor: url(../assets/png/cursor.png), auto;
+  }
+
+  .explore:hover {
+    background-color: #ffffff;
+    color: #181c29;
+    transition: 0.5s;
+    cursor: url(../assets/png/cursor.png), auto;
+  }
+
+  .explore:hover > .explore-link {
+    cursor: url(../assets/png/cursor.png), auto;
+    color: #181c29;
+  }
+
+  .slider-button:hover {
+    background-color: rgba(255, 255, 255);
+    transition: 0.5s;
+    cursor: url(../assets/png/cursor.png), auto;
+  }
+
+  .slider-button:hover > .arrow {
+    stroke-opacity: 1;
+    stroke: rgb(255 70 70);
+    transition: 0.5s;
+  }
+
+  .gift:hover {
+    cursor: url(../assets/png/cursor.png), auto;
+  }
+
+  .gift:hover > .gift-text > .gift-title {
+    color: #ff4646;
+    transition: 0.5s;
+  }
+
+  .contact:hover {
+    color: #ff4646;
+    transition: 0.5s;
+    cursor: url(../assets/png/cursor.png), auto;
+  }
+
+  .icon:hover {
+    stroke: rgb(255 70 70);
+    transition: 0.5s;
+    cursor: url(../assets/png/cursor.png), auto;
+  }
+
+  .RS-School:hover {
+    color: #ff4646;
+    transition: 0.5s;
+    cursor: url(../assets/png/cursor.png), auto;
+  }
+
+  /*HOVER EFFECTS FOR GIFT PAGE*/
+
+  .category:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    cursor: url(../assets/png/cursor.png), auto;
+    transition: 0.5s;
+  }
+}
