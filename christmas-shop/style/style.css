@@ -191,7 +191,7 @@ h1 {
 .about-image {
   display: flex;
   height: 528px;
-  width: 638px;
+  width: 648px;
   border-radius: 20px;
   background-image: url(../assets/png/santa.png);
 }
