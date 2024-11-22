@@ -65,7 +65,7 @@
   }
 
   .about-content {
-    max-width: 99%;
+    max-width: 100%;
   }
 
   .about-image {
@@ -141,6 +141,10 @@
     margin: 8px auto 0px auto;
     width: 632px;
     flex-wrap: wrap;
+  }
+
+  .timer-section {
+    margin-bottom: 3px;
   }
 }
 
