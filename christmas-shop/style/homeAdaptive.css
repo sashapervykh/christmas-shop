@@ -56,11 +56,11 @@
 
 @media (max-width: 995px) {
   .about-wrapper {
-    background-image: url(../assets/png/snow.png);
-    background-size: contain;
+    background: url(../assets/png/snow.png) no-repeat center/1550px;
   }
 
   .about-image {
+    max-width: 376px;
     background-position: center;
   }
 
@@ -69,6 +69,35 @@
     min-width: 376px;
     margin: 0px;
     padding: 105px 60px 0px 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-text {
+    width: calc(100% - 367px);
+    min-width: 0px;
+    margin: 0px;
+    padding: 105px 10px 0px 10px;
+  }
+}
+
+@media (max-width: 634px) {
+  .about-content {
+    margin-top: 48px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-text {
+    padding: 60px 20px 40px 20px;
+    width: inherit;
+  }
+
+  .about-image {
+    width: inherit;
+    max-width: unset;
+    margin: 25px 0px 0px 0px;
+    padding: 0px;
   }
 }
 
