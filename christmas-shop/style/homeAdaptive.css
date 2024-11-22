@@ -47,12 +47,25 @@
     flex-wrap: wrap;
     margin-top: 18px;
   }
+  .timer-section {
+    padding-bottom: 45px;
+    background: url(../assets/png/snow.png) no-repeat center/1600px,
+      url(../assets/png/forest.png) no-repeat center/1440px;
+  }
+
+  .timer-button {
+    margin-top: 19px;
+  }
 }
 
 @media (max-width: 1322px) {
   .about-wrapper {
     padding: 60px 8px;
     background: url(../assets/png/snow.png) no-repeat -55px 0px/108%;
+  }
+
+  .about-content {
+    max-width: 99%;
   }
 
   .about-image {
@@ -166,6 +179,24 @@
     max-width: unset;
     margin: 25px 0px 0px 0px;
     padding: 0px;
+  }
+
+  .timer-section {
+    padding-bottom: 45px;
+    background: url(../assets/png/snow.png) no-repeat center/1680px,
+      url(../assets/png/forest.png) no-repeat center/1530px;
+  }
+
+  .timer-sect-wrapper {
+    width: inherit;
+  }
+
+  .timer-button {
+    margin-top: 18px;
+  }
+
+  .timer {
+    margin-top: 12px;
   }
 }
 

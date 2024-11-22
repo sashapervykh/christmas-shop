@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
@@ -419,7 +420,7 @@ h4 {
 .timer-section {
   padding: 60px 8px 47px 8px;
   background: url(../assets/png/snow.png) no-repeat -80px 0px/111%,
-    url(../assets/png/forest.png) no-repeat 0px 0px/100%;
+    url(../assets/png/forest.png) no-repeat center/1440px;
 }
 
 .timer-sect-wrapper {
