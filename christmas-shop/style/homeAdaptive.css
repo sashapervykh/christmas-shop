@@ -41,6 +41,12 @@
     background: url(../assets/png/snow.png) no-repeat center/1244px,
       url(../assets/png/bg-ball.png) no-repeat center/1244px;
   }
+
+  .gifts-box {
+    width: 98%;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
 }
 
 @media (max-width: 1322px) {
@@ -75,6 +81,17 @@
   }
 }
 
+@media (max-width: 1302px) {
+  .gifts-box {
+    width: 70%;
+    flex-wrap: wrap;
+  }
+
+  .gift {
+    margin-top: 10px;
+  }
+}
+
 @media (max-width: 995px) {
   .about-wrapper {
     background: url(../assets/png/snow.png) no-repeat center/1550px;
@@ -90,6 +107,25 @@
     min-width: 376px;
     margin: 0px;
     padding: 105px 60px 0px 60px;
+  }
+}
+
+@media (max-width: 995px) {
+  .gifts-box {
+    width: 85%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 790px) {
+  .gifts {
+    background: url(../assets/png/snow.png) no-repeat center/2180px;
+  }
+
+  .gifts-box {
+    margin: 8px auto 0px auto;
+    width: 632px;
+    flex-wrap: wrap;
   }
 }
 
