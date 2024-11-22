@@ -1,0 +1,226 @@
+@media (min-width: 1380px) {
+  .hero-wrapper {
+    background: url(../assets/png/snow.png) no-repeat center/1440px,
+      url(../assets/png/bg-ball.png) no-repeat center/1440px;
+  }
+}
+
+@media (min-width: 1322px) {
+  .about-wrapper {
+    padding: 60px 8px;
+    background: url(../assets/png/snow.png) no-repeat -55px 0px/108%;
+  }
+
+  .about-content {
+    margin: 0px auto;
+    width: 1276px;
+  }
+
+  .about-image {
+    margin-left: 100px;
+  }
+
+  .about-text {
+    width: 426px;
+    height: 328px;
+    margin: 100px 60px;
+    padding: 60px 0px;
+  }
+
+  .slider-container {
+    width: 1276px;
+  }
+
+  .slider-buttons {
+    width: 1276px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .hero-wrapper {
+    background: url(../assets/png/snow.png) no-repeat center/1244px,
+      url(../assets/png/bg-ball.png) no-repeat center/1244px;
+  }
+
+  .gifts-box {
+    width: 98%;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+  .timer-section {
+    padding-bottom: 45px;
+    background: url(../assets/png/snow.png) no-repeat center/1600px,
+      url(../assets/png/forest.png) no-repeat center/1440px;
+  }
+
+  .timer-button {
+    margin-top: 19px;
+  }
+}
+
+@media (max-width: 1322px) {
+  .about-wrapper {
+    padding: 60px 8px;
+    background: url(../assets/png/snow.png) no-repeat -55px 0px/108%;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-image {
+    max-width: 628px;
+    margin-left: auto;
+    margin-right: 0px;
+    background-repeat: no-repeat;
+  }
+
+  .about-text {
+    width: 426px;
+    height: 328px;
+    margin: 100px 60px;
+    padding: 60px 0px;
+  }
+
+  .slider-section {
+    background: url(../assets/png/snow.png) no-repeat center/1180px;
+  }
+
+  .slider-container {
+    margin-left: 8px;
+  }
+
+  .slider-buttons {
+    width: inherit;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 1302px) {
+  .gifts-box {
+    width: 70%;
+    flex-wrap: wrap;
+  }
+
+  .gift {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 995px) {
+  .about-wrapper {
+    background: url(../assets/png/snow.png) no-repeat center/1550px;
+  }
+
+  .about-image {
+    max-width: 376px;
+    background-position: center;
+  }
+
+  .about-text {
+    width: 50%;
+    min-width: 376px;
+    margin: 0px;
+    padding: 105px 60px 0px 60px;
+  }
+}
+
+@media (max-width: 995px) {
+  .gifts-box {
+    width: 85%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 790px) {
+  .gifts {
+    background: url(../assets/png/snow.png) no-repeat center/2180px;
+  }
+
+  .gifts-box {
+    margin: 8px auto 0px auto;
+    width: 632px;
+    flex-wrap: wrap;
+  }
+
+  .timer-section {
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-text {
+    width: calc(100% - 367px);
+    min-width: 0px;
+    margin: 0px;
+    padding: 105px 10px 0px 10px;
+  }
+
+  .gifts-box {
+    width: 95%;
+  }
+}
+
+@media (max-width: 685px) {
+  .gifts-box {
+    width: 80%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 634px) {
+  .about-content {
+    margin-top: 48px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-text {
+    padding: 60px 20px 40px 20px;
+    width: inherit;
+  }
+
+  .about-image {
+    width: inherit;
+    max-width: unset;
+    margin: 25px 0px 0px 0px;
+    padding: 0px;
+  }
+
+  .timer-section {
+    padding-bottom: 45px;
+    background: url(../assets/png/snow.png) no-repeat center/1680px,
+      url(../assets/png/forest.png) no-repeat center/1530px;
+  }
+
+  .timer-sect-wrapper {
+    width: inherit;
+  }
+
+  .timer-button {
+    margin-top: 18px;
+  }
+
+  .timer {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-wrapper {
+    background: url(../assets/png/snow.png) no-repeat 50% 0%/1360px,
+      url(../assets/png/bg-ball.png) no-repeat 50% 0%/1360px;
+  }
+
+  .gifts-box {
+    width: 100%;
+    margin-top: 5px;
+    padding-left: 27px;
+    padding-right: 27px;
+    justify-content: center;
+  }
+
+  .gift {
+    margin-top: 12px;
+  }
+}

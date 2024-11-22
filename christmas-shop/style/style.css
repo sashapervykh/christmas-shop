@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
@@ -17,17 +18,19 @@ p {
 }
 
 header {
-  width: 1440px;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .header_wrapper {
   display: flex;
-  width: 1276px;
+  max-width: 1276px;
   margin: 12px auto;
 }
 
 .wrapper__logo {
+  min-width: 150px;
   display: flex;
   padding: 8px 20px;
   cursor: url(../assets/png/cursor.png), auto;
@@ -60,7 +63,6 @@ nav {
   margin-left: auto;
   margin-right: 0px;
   justify-content: space-between;
-  width: 376px;
 }
 
 ul {
@@ -76,14 +78,6 @@ ul {
   transition: 0.5s;
 }
 
-.menu-item:hover {
-  color: #ff4646;
-  background-color: rgba(255, 46, 46, 0.1);
-  border-radius: 12px;
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
 .menu-item__inactive {
   color: #ff4646;
   background-color: rgba(255, 46, 46, 0.1);
@@ -93,7 +87,7 @@ ul {
 }
 
 main {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: #ff4646;
   border-radius: 20px;
@@ -102,8 +96,6 @@ main {
 .hero-wrapper {
   padding: 60px 8px;
   height: 524px;
-  background: url(../assets/png/snow.png) no-repeat center/100%,
-    url(../assets/png/bg-ball.png) no-repeat center/100%;
 }
 
 .hero-content {
@@ -155,7 +147,6 @@ h1 {
   border-radius: 20px;
   background-color: #181c29;
   transition: 0.5s;
-  
 }
 
 .explore-link {
@@ -168,49 +159,22 @@ h1 {
   letter-spacing: 0.04rem;
 }
 
-
-.explore:hover {
-  background-color: #ffffff;
-  color: #181c29;
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
-.explore:hover > .explore-link {
-  cursor: url(../assets/png/cursor.png), auto;
-  color: #181c29;
-}
-
 .bottom-caption {
   margin-top: -3px;
 }
 
-.about-wrapper {
-  padding: 60px 8px;
-  background: url(../assets/png/snow.png) no-repeat -55px 0px/108%;
-}
-
 .about-content {
   display: flex;
-  margin: 0px auto;
   background-color: #ffffff;
   border-radius: 20px;
-  width: 1276px;
 }
 
 .about-image {
-  display: block;
+  display: flex;
   height: 528px;
-  width: 638px;
+  width: 648px;
   border-radius: 20px;
-  margin-left: 100px;
-}
-
-.about-text {
-  width: 426px;
-  height: 328px;
-  margin: 100px 60px;
-  padding: 60px 0px;
+  background-image: url(../assets/png/santa.png);
 }
 
 .about-title {
@@ -262,7 +226,6 @@ h2 {
 
 .slider-container {
   display: flex;
-  width: 1276px;
   height: 200px;
   margin-left: 82px;
   margin-top: 20px;
@@ -295,7 +258,6 @@ h2 {
   display: flex;
   flex-direction: row-reverse;
   margin: 20px auto 0px auto;
-  width: 1276px;
 }
 
 .slider-button {
@@ -329,18 +291,6 @@ h2 {
   stroke-opacity: 0.4;
 }
 
-.slider-button:hover {
-  background-color: rgba(255, 255, 255);
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
-.slider-button:hover > .arrow {
-  stroke-opacity: 1;
-  stroke: rgb(255 70 70);
-  transition: 0.5s;
-}
-
 .gifts {
   padding: 60px 8px;
   background: url(../assets/png/snow.png) no-repeat center/100%;
@@ -371,15 +321,6 @@ h2 {
   height: 342px;
   overflow: hidden;
   background-color: #ecf3f8;
-}
-
-.gift:hover {
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
-.gift:hover > .gift-text > .gift-title {
-  color: #ff4646;
-  transition: 0.5s;
 }
 
 .gift-img {
@@ -438,7 +379,7 @@ h4 {
 .timer-section {
   padding: 60px 8px 47px 8px;
   background: url(../assets/png/snow.png) no-repeat -80px 0px/111%,
-    url(../assets/png/forest.png) no-repeat 0px 0px/100%;
+    url(../assets/png/forest.png) no-repeat center/1440px;
 }
 
 .timer-sect-wrapper {
@@ -519,7 +460,7 @@ h4 {
 }
 
 footer {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -527,24 +468,14 @@ footer {
 
 .contacts {
   display: flex;
-  width: 1276px;
-  height: 204px;
-  justify-content: space-between;
   margin: 60px auto 0px auto;
 }
 
 .contact {
-  width: 417.33px;
   background-color: #ecf3f8;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-}
-
-.contact:hover {
-  color: #ff4646;
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
 }
 
 .cont-image_wrapper {
@@ -579,7 +510,6 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 68px auto 0px auto;
   padding-left: 10px;
 }
 
@@ -610,18 +540,6 @@ footer {
   transition: 0.5s;
 }
 
-.icon:hover {
-  stroke: rgb(255 70 70);
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
 .RS-School {
-  margin: 10px auto 60px auto; 
-}
-
-.RS-School:hover {
-  color: #ff4646;
-  transition: 0.5s;
-  cursor: url(../assets/png/cursor.png), auto;
+  margin: 10px auto 60px auto;
 }

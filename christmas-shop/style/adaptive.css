@@ -1,0 +1,147 @@
+@media (min-width: 1336px) {
+  nav {
+    width: 376px;
+  }
+
+  .contacts {
+    width: 1276px;
+    height: 204px;
+    justify-content: space-between;
+  }
+
+  .contact {
+    width: 417.33px;
+  }
+
+  .icons {
+    margin: 68px auto 0px auto;
+  }
+}
+
+@media (max-width: 1336px) {
+  .contacts {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-around;
+  }
+
+  .contact {
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .icons {
+    margin: 58px auto 0px auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .contacts {
+    flex-direction: column;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .contact {
+    width: inherit;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+
+  .burger-btn {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    padding: 16px 10px;
+  }
+
+  .burger-btn__crossed {
+    padding-top: 19px;
+    padding-left: 10px;
+  }
+
+  .burger-line {
+    width: 20px;
+    height: 1px;
+    background-color: black;
+  }
+
+  .line-two {
+    margin-top: 6px;
+  }
+
+  .line-one__crossed {
+    transform: rotate(-45deg);
+  }
+
+  .line-two__crossed {
+    margin-top: -1px;
+
+    transform: rotate(45deg);
+  }
+
+  .wrapper__logo {
+    margin-left: 8px;
+  }
+
+  .nav-list {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    top: 62px;
+    left: 120vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    justify-content: center;
+    vertical-align: middle;
+  }
+
+  li {
+    position: relative;
+    width: fit-content;
+    height: 60px;
+    margin-bottom: 0px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 152%;
+    letter-spacing: 0.24rem;
+    text-transform: uppercase;
+    margin: 0px auto 8px auto;
+  }
+
+  .menu-item {
+    width: fit-content;
+  }
+
+  .body-burger {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .phone-call {
+    padding-top: 2px;
+  }
+}
+
+@media (max-width: 500px) {
+  .map-title {
+    padding-left: 2px;
+  }
+
+  .map-call {
+    padding-top: 2px;
+  }
+}
