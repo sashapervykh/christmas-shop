@@ -5,10 +5,28 @@
   }
 }
 
+@media (min-width: 1322px) {
+  .about-content {
+    margin: 0px auto;
+    width: 1276px;
+  }
+
+  .about-image {
+    margin-left: 100px;
+  }
+}
+
 @media (max-width: 1380px) {
   .hero-wrapper {
     background: url(../assets/png/snow.png) no-repeat center/1244px,
       url(../assets/png/bg-ball.png) no-repeat center/1244px;
+  }
+}
+
+@media (min-width: 1322px) {
+  .about-image {
+    margin-left: auto;
+    margin-right: 0px;
   }
 }
 

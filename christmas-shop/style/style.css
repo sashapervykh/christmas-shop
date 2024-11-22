@@ -189,18 +189,16 @@ h1 {
 
 .about-content {
   display: flex;
-  margin: 0px auto;
   background-color: #ffffff;
   border-radius: 20px;
-  width: 1276px;
 }
 
 .about-image {
-  display: block;
+  display: flex;
   height: 528px;
   width: 638px;
   border-radius: 20px;
-  margin-left: 100px;
+  background-image: url(../assets/png/santa.png);
 }
 
 .about-text {
