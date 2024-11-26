@@ -64,11 +64,13 @@
     width: 40px;
     height: 40px;
     padding: 16px 10px;
+    transition: 1s;
   }
 
   .burger-btn__crossed {
     padding-top: 19px;
     padding-left: 10px;
+    transition: 1s;
   }
 
   .burger-line {

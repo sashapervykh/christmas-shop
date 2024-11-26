@@ -11,4 +11,5 @@ burgerBtn.addEventListener("click", () => {
   navList.classList.toggle("nav-list__shown");
   burgerLineOne.classList.toggle("line-one__crossed");
   burgerLineTwo.classList.toggle("line-two__crossed");
+  burgerBtn.classList.toggle("burger-btn__crossed");
 });
