@@ -20,3 +20,16 @@ burgerBtn.addEventListener("click", moveBurgerNav);
 navItems.forEach((elem) => {
   elem.addEventListener("click", moveBurgerNav);
 });
+
+addEventListener("resize", (event) => {
+  if (
+    window.innerWidth > 768 &&
+    burgerBtn.classList.contains("burger-btn__crossed")
+  ) {
+    body.classList.remove("body-burger");
+    navList.classList.remove("nav-list__shown");
+    burgerLineOne.classList.remove("line-one__crossed");
+    burgerLineTwo.classList.remove("line-two__crossed");
+    burgerBtn.classList.remove("burger-btn__crossed");
+  }
+});
