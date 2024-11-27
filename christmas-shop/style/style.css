@@ -543,3 +543,107 @@ footer {
 .RS-School {
   margin: 10px auto 60px auto;
 }
+
+/*Style for modal*/
+
+.modal-back {
+  position: fixed;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(24, 28, 41, 0.8);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.modal-body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: clamp(364px, 60vw, 400px);
+  height: fit-content;
+  background-color: #ecf3f8;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-img-wrap {
+  width: 100%;
+  height: 230px;
+}
+
+.modal-text-wrap {
+  width: 100%;
+  background-color: #ffffff;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+.description-text {
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.powers-wrapper {
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.powers-grid {
+  display: grid;
+  margin-top: 8px;
+  padding-bottom: 20px;
+  grid-template-columns: auto 40px 112px;
+  column-gap: 12px;
+  grid-template-rows: repeat(4, 24px);
+}
+
+.star-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+}
+
+.modal-button {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: 12px;
+  margin-top: 12px;
+}
+
+.modal-line-1 {
+  width: 30px;
+  height: 2px;
+  background-color: #181c29;
+  transform: rotate(-45deg);
+  border-radius: 2px;
+  margin-top: 28px;
+  margin-left: 6px;
+}
+
+.modal-line-2 {
+  width: 30px;
+  height: 2px;
+  background-color: #181c29;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  margin-top: -2px;
+  margin-left: 6px;
+}
