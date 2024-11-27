@@ -6,10 +6,6 @@ const navList = document.querySelector(".nav-list");
 const burgerLineOne = document.querySelector(".line-one");
 const burgerLineTwo = document.querySelector(".line-two");
 const navItems = document.querySelectorAll(".nav-item");
-const daysNumber = document.querySelector(".days-number");
-const hourNumber = document.querySelector(".hours-number");
-const minNumber = document.querySelector(".min-number");
-const secNumber = document.querySelector(".sec-number");
 
 function moveBurgerNav() {
   body.classList.toggle("body-burger");
@@ -28,11 +24,20 @@ function calcTimeToNewYear() {
   result.days = Math.floor(timeRemainder / 1000 / 60 / 60 / 24);
   result.hours = Math.floor((timeRemainder / 1000 / 60 / 60) % 24);
   result.min = Math.floor((timeRemainder / 1000 / 60) % 60);
-  result.sec = Math.ceil((timeRemainder / 1000) % 60);
+  result.sec = Math.floor((timeRemainder / 1000) % 60);
   return result;
 }
 
-console.log(calcTimeToNewYear());
+function changeTimer() {
+  const daysNumber = document.querySelector(".days-number");
+  const hourNumber = document.querySelector(".hour-number");
+  const minNumber = document.querySelector(".min-number");
+  const secNumber = document.querySelector(".sec-number");
+  daysNumber.textContent = calcTimeToNewYear().days;
+  hourNumber.textContent = calcTimeToNewYear().hours;
+  minNumber.textContent = calcTimeToNewYear().min;
+  secNumber.textContent = calcTimeToNewYear().sec;
+}
 
 burgerBtn.addEventListener("click", moveBurgerNav);
 
@@ -54,5 +59,5 @@ addEventListener("resize", (event) => {
 });
 
 let timer = setInterval(function tick() {
-  console.log(calcTimeToNewYear());
+  changeTimer();
 }, 200);
