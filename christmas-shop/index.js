@@ -152,6 +152,9 @@ function createModal(giftInfo) {
   const body = document.querySelector("body");
   body.classList.add("modal-body");
 
+  const html = document.querySelector("html");
+  html.classList.add("modal-body");
+
   const modalBack = addElement({
     parent: body,
     elementType: "div",
@@ -203,7 +206,7 @@ function createModal(giftInfo) {
   const giftCategory = addElement({
     parent: descriptionText,
     elementType: "h4",
-    styles: ["gift-category", "work-color"],
+    styles: ["gift-category", `${category}-color`],
     textContent: `${giftInfo.category}`,
   });
 
@@ -243,4 +246,14 @@ function createModal(giftInfo) {
   fillPowersGrid(powersGrid, giftInfo.superpowers);
 }
 
-createModal(giftList[1]);
+const giftsCard = document.querySelectorAll(".gift");
+
+giftsCard.forEach((elem) => {
+  elem.addEventListener("click", (e) => {
+    const giftTitle = elem.querySelector(".gift-title");
+    const isChosenGift = (gift) =>
+      giftTitle.textContent.toLowerCase() === gift.name.toLowerCase();
+    const chosenGiftIndex = giftList.findIndex(isChosenGift);
+    createModal(giftList[chosenGiftIndex]);
+  });
+});
