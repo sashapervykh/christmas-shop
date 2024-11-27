@@ -133,6 +133,22 @@ function addElement({
 }
 
 function createModal(giftInfo) {
+  let category;
+
+  switch (giftInfo.category) {
+    case "For Work":
+      category = "work";
+      break;
+    case "For Health":
+      category = "health";
+      break;
+    case "For Harmony":
+      category = "harmony";
+      break;
+    default:
+      console.log("Something goes wrong. There is an error in category.");
+  }
+
   const body = document.querySelector("body");
   body.classList.add("modal-body");
 
@@ -152,7 +168,7 @@ function createModal(giftInfo) {
     parent: modalWrap,
     elementType: "div",
     styles: ["modal-img-wrap"],
-    background: "url(assets/png/work.png) no-repeat center/100%",
+    background: `url(assets/png/${category}.png) no-repeat center/100%`,
   });
 
   const modalButton = addElement({
