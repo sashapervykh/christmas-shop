@@ -73,75 +73,151 @@ function addStars(parentElement, powersRate) {
   }
 }
 
+function fillPowersGrid(parentGrid) {
+  const powers = ["Live", "Create", "Love", "Dream"];
+  for (let i = 0; i < powers.length; i++) {
+    addElement({
+      parent: parentGrid,
+      elementType: "div",
+      styles: ["main-text-font"],
+      background: undefined,
+      textContent: powers[i],
+    });
+
+    addElement({
+      parent: parentGrid,
+      elementType: "div",
+      styles: ["main-text-font"],
+      background: undefined,
+      textContent: "+500",
+    });
+
+    const liveStars = addElement({
+      parent: parentGrid,
+      elementType: "div",
+      styles: ["star-box"],
+      background: undefined,
+    });
+
+    addStars(liveStars, "+500");
+  }
+}
+
+function addElement({
+  parent,
+  elementType,
+  styles = [],
+  background = undefined,
+  textContent = undefined,
+}) {
+  const newElement = document.createElement(elementType);
+  for (let i = 0; i < styles.length; i++) {
+    newElement.classList.add(`${styles[i]}`);
+  }
+  if (background !== undefined) {
+    newElement.style.background = `${background}`;
+  }
+  if (textContent !== undefined) {
+    newElement.textContent = `${textContent}`;
+  }
+  parent.appendChild(newElement);
+  return newElement;
+}
+
 function createModal() {
   const body = document.querySelector("body");
   body.classList.add("modal-body");
-  const modalBack = document.createElement("div");
-  body.appendChild(modalBack);
-  modalBack.classList.add("modal-back");
-  const modalWrap = document.createElement("div");
-  modalBack.appendChild(modalWrap);
-  modalWrap.classList.add("modal-wrapper");
 
-  const modalWrapImg = document.createElement("div");
-  modalWrap.appendChild(modalWrapImg);
-  modalWrapImg.classList.add("modal-img-wrap");
-  modalWrapImg.style.background =
-    "url(assets/png/work.png) no-repeat center/100%";
+  const modalBack = addElement({
+    parent: body,
+    elementType: "div",
+    styles: ["modal-back"],
+  });
 
-  const modalButton = document.createElement("div");
-  modalWrapImg.appendChild(modalButton);
-  modalButton.classList.add("modal-button");
+  const modalWrap = addElement({
+    parent: modalBack,
+    elementType: "div",
+    styles: ["modal-wrapper"],
+  });
 
-  const modalButtonLine1 = document.createElement("div");
-  modalButton.appendChild(modalButtonLine1);
-  modalButtonLine1.classList.add("modal-line-1");
+  const modalWrapImg = addElement({
+    parent: modalWrap,
+    elementType: "div",
+    styles: ["modal-img-wrap"],
+    background: "url(assets/png/work.png) no-repeat center/100%",
+  });
 
-  const modalButtonLine2 = document.createElement("div");
-  modalButton.appendChild(modalButtonLine2);
-  modalButtonLine2.classList.add("modal-line-2");
+  const modalButton = addElement({
+    parent: modalWrapImg,
+    elementType: "div",
+    styles: ["modal-button"],
+  });
 
-  const modalWrapTxt = document.createElement("div");
-  modalWrap.appendChild(modalWrapTxt);
-  modalWrapTxt.classList.add("modal-text-wrap");
+  const modalButtonLine1 = addElement({
+    parent: modalButton,
+    elementType: "div",
+    styles: ["modal-line-1"],
+  });
 
-  const descriptionText = document.createElement("div");
-  modalWrapTxt.appendChild(descriptionText);
+  const modalButtonLine2 = addElement({
+    parent: modalButton,
+    elementType: "div",
+    styles: ["modal-line-2"],
+  });
 
-  const giftCategory = document.createElement("h4");
-  descriptionText.appendChild(giftCategory);
-  giftCategory.classList.add("gift-category");
-  giftCategory.classList.add("work-color");
-  giftCategory.textContent = "FOR WORK";
+  const modalWrapTxt = addElement({
+    parent: modalWrap,
+    elementType: "div",
+    styles: ["modal-text-wrap"],
+  });
 
-  const giftTitle = document.createElement("h3");
-  descriptionText.appendChild(giftTitle);
-  giftTitle.classList.add("gift-title");
-  giftTitle.textContent = "Console.log Guru";
+  const descriptionText = addElement({
+    parent: modalWrapTxt,
+    elementType: "div",
+  });
 
-  const giftDescription = document.createElement("p");
-  descriptionText.appendChild(giftDescription);
-  giftDescription.classList.add("main-text-font");
-  giftDescription.classList.add("description-text");
-  giftDescription.textContent =
-    "Uses console.log like a crystal ball to find any issue";
+  const giftCategory = addElement({
+    parent: descriptionText,
+    elementType: "h4",
+    styles: ["gift-category", "work-color"],
+    textContent: "FOR WORK",
+  });
 
-  const giftSuperpowers = document.createElement("div");
-  modalWrapTxt.appendChild(giftSuperpowers);
-  giftSuperpowers.classList.add("powers-wrapper");
+  const giftTitle = addElement({
+    parent: descriptionText,
+    elementType: "h3",
+    styles: ["gift-title"],
+    textContent: "Console.log Guru",
+  });
 
-  const powersTitle = document.createElement("h4");
-  giftSuperpowers.appendChild(powersTitle);
-  powersTitle.textContent = "ADDS SUPERPOWERS TO:";
+  const giftDescription = addElement({
+    parent: descriptionText,
+    elementType: "p",
+    styles: ["main-text-font", "description-text"],
+    textContent: "Uses console.log like a crystal ball to find any issue",
+  });
 
-  giftDescription.classList.add("description-text");
-  giftDescription.textContent =
-    "Uses console.log like a crystal ball to find any issue";
+  const giftSuperpowers = addElement({
+    parent: modalWrapTxt,
+    elementType: "div",
+    styles: ["powers-wrapper"],
+  });
 
-  const powersGrid = document.createElement("div");
-  giftSuperpowers.appendChild(powersGrid);
-  powersGrid.classList.add("powers-grid");
+  const powersTitle = addElement({
+    parent: giftSuperpowers,
+    elementType: "h4",
+    styles: [],
+    textContent: "ADDS SUPERPOWERS TO:",
+  });
 
+  const powersGrid = addElement({
+    parent: giftSuperpowers,
+    elementType: "div",
+    styles: ["powers-grid"],
+  });
+
+  fillPowersGrid(powersGrid);
+  /*
   const liveDiv = document.createElement("div");
   powersGrid.appendChild(liveDiv);
   liveDiv.classList.add("main-text-font");
@@ -200,7 +276,7 @@ function createModal() {
   const dreamStars = document.createElement("div");
   powersGrid.appendChild(dreamStars);
   dreamStars.classList.add("star-box");
-  addStars(dreamStars, "+500");
+  addStars(dreamStars, "+500"); */
 }
 
 createModal();
