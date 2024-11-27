@@ -71,9 +71,17 @@ function addStars(parentElement, powersRate) {
     star.style.background =
       "url(assets/png/snowflake.png) no-repeat center/100%";
   }
+
+  for (let i = 0; i < 5 - numOfStars; i++) {
+    const star = document.createElement("div");
+    parentElement.appendChild(star);
+    star.classList.add("star");
+    star.style.background =
+      "url(assets/png/snowflake_pale.png) no-repeat center/100%";
+  }
 }
 
-function fillPowersGrid(parentGrid) {
+function fillPowersGrid(parentGrid, powersInfo) {
   const powers = ["Live", "Create", "Love", "Dream"];
   for (let i = 0; i < powers.length; i++) {
     addElement({
@@ -89,7 +97,7 @@ function fillPowersGrid(parentGrid) {
       elementType: "div",
       styles: ["main-text-font"],
       background: undefined,
-      textContent: "+500",
+      textContent: powersInfo[powers[i].toLowerCase()],
     });
 
     const liveStars = addElement({
@@ -99,7 +107,7 @@ function fillPowersGrid(parentGrid) {
       background: undefined,
     });
 
-    addStars(liveStars, "+500");
+    addStars(liveStars, powersInfo[powers[i].toLowerCase()]);
   }
 }
 
@@ -124,7 +132,7 @@ function addElement({
   return newElement;
 }
 
-function createModal() {
+function createModal(giftInfo) {
   const body = document.querySelector("body");
   body.classList.add("modal-body");
 
@@ -180,21 +188,21 @@ function createModal() {
     parent: descriptionText,
     elementType: "h4",
     styles: ["gift-category", "work-color"],
-    textContent: "FOR WORK",
+    textContent: `${giftInfo.category}`,
   });
 
   const giftTitle = addElement({
     parent: descriptionText,
     elementType: "h3",
     styles: ["gift-title"],
-    textContent: "Console.log Guru",
+    textContent: `${giftInfo.name}`,
   });
 
   const giftDescription = addElement({
     parent: descriptionText,
     elementType: "p",
     styles: ["main-text-font", "description-text"],
-    textContent: "Uses console.log like a crystal ball to find any issue",
+    textContent: `${giftInfo.description}`,
   });
 
   const giftSuperpowers = addElement({
@@ -216,67 +224,7 @@ function createModal() {
     styles: ["powers-grid"],
   });
 
-  fillPowersGrid(powersGrid);
-  /*
-  const liveDiv = document.createElement("div");
-  powersGrid.appendChild(liveDiv);
-  liveDiv.classList.add("main-text-font");
-  liveDiv.textContent = "Live";
-
-  const liveRate = document.createElement("div");
-  powersGrid.appendChild(liveRate);
-  liveRate.classList.add("main-text-font");
-  liveRate.textContent = "+500";
-
-  const liveStars = document.createElement("div");
-  powersGrid.appendChild(liveStars);
-  liveStars.classList.add("star-box");
-  addStars(liveStars, "+500");
-
-  const createDiv = document.createElement("div");
-  powersGrid.appendChild(createDiv);
-  createDiv.classList.add("main-text-font");
-  createDiv.textContent = "Create";
-
-  const createRate = document.createElement("div");
-  powersGrid.appendChild(createRate);
-  createRate.classList.add("main-text-font");
-  createRate.textContent = "+500";
-
-  const createStars = document.createElement("div");
-  powersGrid.appendChild(createStars);
-  createStars.classList.add("star-box");
-  addStars(createStars, "+500");
-
-  const loveDiv = document.createElement("div");
-  powersGrid.appendChild(loveDiv);
-  loveDiv.classList.add("main-text-font");
-  loveDiv.textContent = "Love";
-
-  const loveRate = document.createElement("div");
-  powersGrid.appendChild(loveRate);
-  loveRate.classList.add("main-text-font");
-  loveRate.textContent = "+500";
-
-  const loveStars = document.createElement("div");
-  powersGrid.appendChild(loveStars);
-  loveStars.classList.add("star-box");
-  addStars(loveStars, "+500");
-
-  const dreamDiv = document.createElement("div");
-  powersGrid.appendChild(dreamDiv);
-  dreamDiv.classList.add("main-text-font");
-  dreamDiv.textContent = "Dream";
-
-  const dreamRate = document.createElement("div");
-  powersGrid.appendChild(dreamRate);
-  dreamRate.classList.add("main-text-font");
-  dreamRate.textContent = "+500";
-
-  const dreamStars = document.createElement("div");
-  powersGrid.appendChild(dreamStars);
-  dreamStars.classList.add("star-box");
-  addStars(dreamStars, "+500"); */
+  fillPowersGrid(powersGrid, giftInfo.superpowers);
 }
 
-createModal();
+createModal(giftList[1]);
