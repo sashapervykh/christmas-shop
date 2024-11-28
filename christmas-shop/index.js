@@ -429,3 +429,29 @@ function removeAllInnerElements(parent) {
 }
 
 createGiftGrid(giftList, pageType);
+
+function showScrollBtn() {
+  const scrollBtn = document.querySelector(".scroll-btn");
+  scrollBtn.classList.add("scroll-btn__flex");
+
+  scrollBtn.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+}
+
+function removeScrollBtn() {
+  const scrollBtn = document.querySelector(".scroll-btn");
+  scrollBtn.classList.remove("scroll-btn__flex");
+}
+
+console.log(window.innerWidth);
+if (pageType === "gifts" && window.innerWidth <= 768) {
+  window.onscroll = () => {
+    if (document.documentElement.scrollTop > 300) {
+      showScrollBtn();
+    }
+    if (document.documentElement.scrollTop < 300) {
+      removeScrollBtn();
+    }
+  };
+}
