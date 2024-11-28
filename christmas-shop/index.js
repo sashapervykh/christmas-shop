@@ -359,4 +359,12 @@ function createGiftCard(parent, gift, pageType) {
   });
 }
 
-const homeGiftsBox = document.querySelector(".gifts-box");
+function createHomeGiftBox(giftList, pageType) {
+  const fourRandomNumbers = chooseFourRandom();
+  const homeGiftsBox = document.querySelector(".gifts-box");
+  for (let i = 0; i < 4; i++) {
+    createGiftCard(homeGiftsBox, giftList[fourRandomNumbers[i]], pageType);
+  }
+}
+
+createHomeGiftBox(giftList, pageType);
