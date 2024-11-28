@@ -66,4 +66,8 @@
     cursor: url(../assets/png/cursor.png), auto;
     transition: 0.5s;
   }
+
+  .modal-button:hover {
+    cursor: url(../assets/png/cursor.png), auto;
+  }
 }

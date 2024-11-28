@@ -617,12 +617,20 @@ footer {
 }
 
 .modal-button {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 40px;
   height: 40px;
   margin-left: auto;
   margin-right: 13px;
-  margin-top: 30px;
+  margin-top: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-button:hover {
+  cursor: url(../assets/png/cursor.png), auto;
 }
 
 .modal-line-1 {
@@ -631,8 +639,6 @@ footer {
   background-color: #181c29;
   transform: rotate(-45deg);
   border-radius: 2px;
-  margin-top: 28px;
-  margin-left: 6px;
 }
 
 .modal-line-2 {
@@ -642,5 +648,4 @@ footer {
   transform: rotate(45deg);
   border-radius: 2px;
   margin-top: -2px;
-  margin-left: 6px;
 }

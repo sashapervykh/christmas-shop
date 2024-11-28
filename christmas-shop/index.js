@@ -255,5 +255,27 @@ giftsCard.forEach((elem) => {
       giftTitle.textContent.toLowerCase() === gift.name.toLowerCase();
     const chosenGiftIndex = giftList.findIndex(isChosenGift);
     createModal(giftList[chosenGiftIndex]);
+
+    const modalButton = document.querySelector(".modal-button");
+
+    modalButton.addEventListener("click", removeModal);
+
+    const modalBack = document.querySelector(".modal-back");
+
+    modalBack.addEventListener("click", (e) => {
+      const modalWrap = document.querySelector(".modal-wrapper");
+      if (e.target !== modalWrap) {
+        console.log(1);
+      }
+    });
   });
 });
+
+function removeModal() {
+  const body = document.querySelector("body");
+  const html = document.querySelector("html");
+  const modalBack = document.querySelector(".modal-back");
+  body.removeChild(modalBack);
+  body.classList.remove("modal-body");
+  html.classList.remove("modal-body");
+}
