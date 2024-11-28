@@ -261,13 +261,14 @@ giftsCard.forEach((elem) => {
     modalButton.addEventListener("click", removeModal);
 
     const modalBack = document.querySelector(".modal-back");
-
-    modalBack.addEventListener("click", (e) => {
-      const modalWrap = document.querySelector(".modal-wrapper");
-      if (e.target !== modalWrap) {
-        console.log(1);
-      }
-    });
+    if (modalBack !== null) {
+      modalBack.addEventListener("click", (e) => {
+        const modalWrap = document.querySelector(".modal-wrapper");
+        if (!modalWrap.contains(e.target)) {
+          removeModal();
+        }
+      });
+    }
   });
 });
 

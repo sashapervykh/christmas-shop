@@ -70,4 +70,9 @@
   .modal-button:hover {
     cursor: url(../assets/png/cursor.png), auto;
   }
+
+  .modal-button:hover > div {
+    background-color: #ff4646;
+    transition: 0.5s;
+  }
 }
