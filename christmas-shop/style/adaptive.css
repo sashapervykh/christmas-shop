@@ -56,6 +56,20 @@
     position: relative;
   }
 
+  .scroll-btn {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5px;
+    bottom: 5px;
+    width: 56px;
+    height: 56px;
+    background-color: #ffffff;
+    border: 1px solid #ff4646;
+    border-radius: 100px;
+  }
+
   .burger-btn {
     display: flex;
     flex-direction: column;
