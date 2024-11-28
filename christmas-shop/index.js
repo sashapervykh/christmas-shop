@@ -140,11 +140,9 @@ function defineImageUrl(pageType) {
   return "../";
 }
 
-function createModal(giftInfo, pageType) {
+function getGiftCategory(giftCategory) {
   let category;
-  const imageURL = defineImageUrl(pageType);
-
-  switch (giftInfo.category) {
+  switch (giftCategory) {
     case "For Work":
       category = "work";
       break;
@@ -155,8 +153,14 @@ function createModal(giftInfo, pageType) {
       category = "harmony";
       break;
     default:
-      console.log("Something goes wrong. There is an error in category.");
+      return "Something goes wrong. There is an error in category.";
   }
+  return category;
+}
+
+function createModal(giftInfo, pageType) {
+  let category = getGiftCategory(giftInfo.category);
+  const imageURL = defineImageUrl(pageType);
 
   const body = document.querySelector("body");
   body.classList.add("modal-body");
@@ -289,4 +293,64 @@ function removeModalByBack(e) {
   if (!modalWrap.contains(e.target)) {
     removeModal();
   }
+}
+
+function chooseFourRandom() {
+  const arrayOfRandom = [];
+  function chooseRandom(arrayOfRandom) {
+    const randomIndex = Math.floor(Math.random() * 36);
+    if (arrayOfRandom.includes(randomIndex)) {
+      chooseRandom(arrayOfRandom);
+    } else {
+      arrayOfRandom.push(randomIndex);
+    }
+    return arrayOfRandom;
+  }
+  for (let i = 0; i < 4; i++) {
+    chooseRandom(arrayOfRandom);
+  }
+  return arrayOfRandom;
+}
+
+function createGiftCard(parent, gift, pageType) {
+  const giftWrap = addElement({
+    parent: parent,
+    elementType: "div",
+    styles: ["gift"],
+  });
+
+  const giftImgWrap = addElement({
+    parent: giftWrap,
+    elementType: "div",
+    styles: ["gift-img"],
+  });
+
+  const giftImg = addElement({
+    parent: giftImgWrap,
+    elementType: "img",
+  });
+
+  // Добавить ссылку на страницу и альт для картинки
+
+  const giftText = addElement({
+    parent: giftWrap,
+    elementType: "div",
+    styles: ["gift-text"],
+  });
+
+  const giftCategory = addElement({
+    parent: giftText,
+    elementType: "h4",
+    styles: ["gift-category", `${category}-color`],
+    background: undefined,
+    textContent: gift.category,
+  });
+
+  const giftTitle = addElement({
+    parent: giftText,
+    elementType: "h3",
+    styles: ["gift-title"],
+    background: undefined,
+    textContent: gift.name,
+  });
 }
