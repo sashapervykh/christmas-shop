@@ -313,6 +313,9 @@ function chooseFourRandom() {
 }
 
 function createGiftCard(parent, gift, pageType) {
+  const category = getGiftCategory(gift.category);
+  const imageUrl = defineImageUrl(pageType);
+
   const giftWrap = addElement({
     parent: parent,
     elementType: "div",
@@ -330,7 +333,8 @@ function createGiftCard(parent, gift, pageType) {
     elementType: "img",
   });
 
-  // Добавить ссылку на страницу и альт для картинки
+  giftImg.setAttribute("src", `${imageUrl}assets/png/${category}.png`);
+  giftImg.setAttribute("alt", `Image for gift category`);
 
   const giftText = addElement({
     parent: giftWrap,
@@ -354,3 +358,5 @@ function createGiftCard(parent, gift, pageType) {
     textContent: gift.name,
   });
 }
+
+const homeGiftsBox = document.querySelector(".gifts-box");
