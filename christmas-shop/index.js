@@ -57,6 +57,13 @@ addEventListener("resize", (event) => {
     burgerLineTwo.classList.remove("line-two__crossed");
     burgerBtn.classList.remove("burger-btn__crossed");
   }
+
+  if (document.documentElement.scrollTop > 300 && window.innerWidth < 768) {
+    showScrollBtn();
+  }
+  if (document.documentElement.scrollTop < 300) {
+    removeScrollBtn();
+  }
 });
 
 if (pageType === "home") {
@@ -444,10 +451,9 @@ function removeScrollBtn() {
   scrollBtn.classList.remove("scroll-btn__flex");
 }
 
-console.log(window.innerWidth);
-if (pageType === "gifts" && window.innerWidth <= 768) {
+if (pageType === "gifts") {
   window.onscroll = () => {
-    if (document.documentElement.scrollTop > 300) {
+    if (document.documentElement.scrollTop > 300 && window.innerWidth <= 768) {
       showScrollBtn();
     }
     if (document.documentElement.scrollTop < 300) {

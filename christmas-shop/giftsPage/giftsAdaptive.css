@@ -5,6 +5,10 @@
     column-gap: 12px;
     row-gap: 12px;
   }
+
+  .scroll-btn {
+    display: none;
+  }
 }
 
 @media (max-width: 1322px) {
@@ -15,6 +19,10 @@
     column-gap: calc((98vw - 1100px) / 2);
     row-gap: 12px;
     justify-content: center;
+  }
+
+  .scroll-btn {
+    display: none;
   }
 }
 
