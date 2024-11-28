@@ -259,25 +259,6 @@ function createModal(giftInfo, pageType) {
   fillPowersGrid(powersGrid, giftInfo.superpowers);
 }
 
-const giftsCard = document.querySelectorAll(".gift");
-
-giftsCard.forEach((elem) => {
-  elem.addEventListener("click", (e) => {
-    const giftTitle = elem.querySelector(".gift-title");
-    const isChosenGift = (gift) =>
-      giftTitle.textContent.toLowerCase() === gift.name.toLowerCase();
-    const chosenGiftIndex = giftList.findIndex(isChosenGift);
-    createModal(giftList[chosenGiftIndex], pageType);
-
-    const modalButton = document.querySelector(".modal-button");
-
-    modalButton.addEventListener("click", removeModal);
-
-    const modalBack = document.querySelector(".modal-back");
-    modalBack.addEventListener("click", removeModalByBack);
-  });
-});
-
 function removeModal() {
   const body = document.querySelector("body");
   const html = document.querySelector("html");
@@ -365,6 +346,25 @@ function createHomeGiftBox(giftList, pageType) {
   for (let i = 0; i < 4; i++) {
     createGiftCard(homeGiftsBox, giftList[fourRandomNumbers[i]], pageType);
   }
+
+  const giftsCard = document.querySelectorAll(".gift");
+
+  giftsCard.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      const giftTitle = elem.querySelector(".gift-title");
+      const isChosenGift = (gift) =>
+        giftTitle.textContent.toLowerCase() === gift.name.toLowerCase();
+      const chosenGiftIndex = giftList.findIndex(isChosenGift);
+      createModal(giftList[chosenGiftIndex], pageType);
+
+      const modalButton = document.querySelector(".modal-button");
+
+      modalButton.addEventListener("click", removeModal);
+
+      const modalBack = document.querySelector(".modal-back");
+      modalBack.addEventListener("click", removeModalByBack);
+    });
+  });
 }
 
 createHomeGiftBox(giftList, pageType);
