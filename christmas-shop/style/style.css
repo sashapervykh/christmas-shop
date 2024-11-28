@@ -629,10 +629,6 @@ footer {
   justify-content: center;
 }
 
-.modal-button:hover {
-  cursor: url(../assets/png/cursor.png), auto;
-}
-
 .modal-line-1 {
   width: 30px;
   height: 2px;

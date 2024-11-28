@@ -6,6 +6,7 @@ const navList = document.querySelector(".nav-list");
 const burgerLineOne = document.querySelector(".line-one");
 const burgerLineTwo = document.querySelector(".line-two");
 const navItems = document.querySelectorAll(".nav-item");
+const pageType = document.querySelector(".gifts-grid") ? "gifts" : "home";
 
 function moveBurgerNav() {
   body.classList.toggle("body-burger");
@@ -58,26 +59,28 @@ addEventListener("resize", (event) => {
   }
 });
 
-let timer = setInterval(function tick() {
-  changeTimer();
-}, 200);
+if (pageType === "home") {
+  let timer = setInterval(function tick() {
+    changeTimer();
+  }, 200);
+}
 
 function addStars(parentElement, powersRate) {
+  const imageURL = defineImageUrl(pageType);
+
   let numOfStars = parseInt(powersRate[1]);
   for (let i = 0; i < numOfStars; i++) {
     const star = document.createElement("div");
     parentElement.appendChild(star);
     star.classList.add("star");
-    star.style.background =
-      "url(assets/png/snowflake.png) no-repeat center/100%";
+    star.style.background = `url(${imageURL}assets/png/snowflake.png) no-repeat center/100%`;
   }
 
   for (let i = 0; i < 5 - numOfStars; i++) {
     const star = document.createElement("div");
     parentElement.appendChild(star);
     star.classList.add("star");
-    star.style.background =
-      "url(assets/png/snowflake_pale.png) no-repeat center/100%";
+    star.style.background = `url(${imageURL}assets/png/snowflake_pale.png) no-repeat center/100%`;
   }
 }
 
@@ -132,8 +135,14 @@ function addElement({
   return newElement;
 }
 
-function createModal(giftInfo) {
+function defineImageUrl(pageType) {
+  if (pageType === "home") return "./";
+  return "../";
+}
+
+function createModal(giftInfo, pageType) {
   let category;
+  const imageURL = defineImageUrl(pageType);
 
   switch (giftInfo.category) {
     case "For Work":
@@ -171,7 +180,7 @@ function createModal(giftInfo) {
     parent: modalWrap,
     elementType: "div",
     styles: ["modal-img-wrap"],
-    background: `url(assets/png/${category}.png) no-repeat center/100%`,
+    background: `url(${imageURL}assets/png/${category}.png) no-repeat center/100%`,
   });
 
   const modalButton = addElement({
@@ -254,21 +263,14 @@ giftsCard.forEach((elem) => {
     const isChosenGift = (gift) =>
       giftTitle.textContent.toLowerCase() === gift.name.toLowerCase();
     const chosenGiftIndex = giftList.findIndex(isChosenGift);
-    createModal(giftList[chosenGiftIndex]);
+    createModal(giftList[chosenGiftIndex], pageType);
 
     const modalButton = document.querySelector(".modal-button");
 
     modalButton.addEventListener("click", removeModal);
 
     const modalBack = document.querySelector(".modal-back");
-    if (modalBack !== null) {
-      modalBack.addEventListener("click", (e) => {
-        const modalWrap = document.querySelector(".modal-wrapper");
-        if (!modalWrap.contains(e.target)) {
-          removeModal();
-        }
-      });
-    }
+    modalBack.addEventListener("click", removeModalByBack);
   });
 });
 
@@ -279,4 +281,12 @@ function removeModal() {
   body.removeChild(modalBack);
   body.classList.remove("modal-body");
   html.classList.remove("modal-body");
+  modalBack.removeEventListener("click", removeModalByBack);
+}
+
+function removeModalByBack(e) {
+  const modalWrap = document.querySelector(".modal-wrapper");
+  if (!modalWrap.contains(e.target)) {
+    removeModal();
+  }
 }
