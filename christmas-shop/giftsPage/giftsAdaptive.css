@@ -11,7 +11,7 @@
   .gifts-grid {
     width: 99%;
     grid-template-columns: repeat(3, 310px);
-    grid-template-rows: repeat(3, 342px);
+    grid-auto-rows: 342px;
     column-gap: calc((98vw - 1100px) / 2);
     row-gap: 12px;
     justify-content: center;

@@ -367,4 +367,56 @@ function createHomeGiftBox(giftList, pageType) {
   });
 }
 
-createHomeGiftBox(giftList, pageType);
+if (pageType === "home") {
+  createHomeGiftBox(giftList, pageType);
+}
+
+function changeCategory(elem) {
+  const activeCategory = document.querySelector(".category__active");
+  activeCategory.classList.remove("category__active");
+  elem.classList.add("category__active");
+}
+
+const category = document.querySelectorAll(".category");
+category.forEach((elem) => {
+  elem.addEventListener("click", (e) => {
+    changeCategory(elem);
+  });
+});
+
+function createGiftGrid(giftList, pageType) {
+  const activeCategory = document.querySelector(".category__active");
+  const giftsGrid = document.querySelector(".gifts-grid");
+  let arrayToShow = giftList;
+
+  if (activeCategory.textContent.trim().toUpperCase() !== "ALL") {
+    arrayToShow = giftList.filter(
+      (gift) => gift.category.toUpperCase() === activeCategory.textContent
+    );
+  }
+
+  for (let i = 0; i < arrayToShow.length; i++) {
+    createGiftCard(giftsGrid, arrayToShow[i], pageType);
+  }
+
+  const giftsCard = document.querySelectorAll(".gift");
+
+  giftsCard.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      const giftTitle = elem.querySelector(".gift-title");
+      const isChosenGift = (gift) =>
+        giftTitle.textContent.toLowerCase() === gift.name.toLowerCase();
+      const chosenGiftIndex = giftList.findIndex(isChosenGift);
+      createModal(giftList[chosenGiftIndex], pageType);
+
+      const modalButton = document.querySelector(".modal-button");
+
+      modalButton.addEventListener("click", removeModal);
+
+      const modalBack = document.querySelector(".modal-back");
+      modalBack.addEventListener("click", removeModalByBack);
+    });
+  });
+}
+
+createGiftGrid(giftList, pageType);
