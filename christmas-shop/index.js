@@ -375,6 +375,9 @@ function changeCategory(elem) {
   const activeCategory = document.querySelector(".category__active");
   activeCategory.classList.remove("category__active");
   elem.classList.add("category__active");
+  const giftsGrid = document.querySelector(".gifts-grid");
+  removeAllInnerElements(giftsGrid);
+  createGiftGrid(giftList, pageType);
 }
 
 const category = document.querySelectorAll(".category");
@@ -391,7 +394,9 @@ function createGiftGrid(giftList, pageType) {
 
   if (activeCategory.textContent.trim().toUpperCase() !== "ALL") {
     arrayToShow = giftList.filter(
-      (gift) => gift.category.toUpperCase() === activeCategory.textContent
+      (gift) =>
+        gift.category.trim().toUpperCase() ===
+        activeCategory.textContent.trim().toUpperCase()
     );
   }
 
@@ -417,6 +422,10 @@ function createGiftGrid(giftList, pageType) {
       modalBack.addEventListener("click", removeModalByBack);
     });
   });
+}
+
+function removeAllInnerElements(parent) {
+  parent.innerHTML = "";
 }
 
 createGiftGrid(giftList, pageType);
