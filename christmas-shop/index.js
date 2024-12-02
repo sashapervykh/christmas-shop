@@ -70,6 +70,8 @@ addEventListener("resize", (event) => {
       removeScrollBtn();
     }
   }
+
+  if (pageType === "home") moveSliderToStart();
 });
 
 if (pageType === "home") {
@@ -499,6 +501,22 @@ function moveToLeft() {
   const sliderShift = Math.round(2000 - sliderContainer.offsetWidth) / 3;
   sliderPosition -= sliderShift;
   sliderContainer.style.transform = `translateX(-${sliderPosition}px)`;
+}
+
+function moveSliderToStart() {
+  sliderPosition = 0;
+  sliderStep = 0;
+  const sliderContainer = document.querySelector(".slider-container");
+  sliderContainer.style.transform = `translateX(-${sliderPosition}px)`;
+  if (sliderRightButton.classList.contains("inactive")) {
+    sliderRightButton.classList.remove("inactive");
+    sliderRightButton.classList.add("chosen");
+  }
+
+  if (sliderLeftButton.classList.contains("chosen")) {
+    sliderLeftButton.classList.remove("chosen");
+    sliderLeftButton.classList.add("inactive");
+  }
 }
 
 sliderRightButton.addEventListener("click", moveToRight);
