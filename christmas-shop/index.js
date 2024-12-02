@@ -7,6 +7,10 @@ const burgerLineOne = document.querySelector(".line-one");
 const burgerLineTwo = document.querySelector(".line-two");
 const navItems = document.querySelectorAll(".nav-item");
 const pageType = document.querySelector(".gifts-grid") ? "gifts" : "home";
+const sliderRightButton = document.querySelector(".right");
+const sliderLeftButton = document.querySelector(".left");
+let sliderPosition = 0;
+let sliderStep = 0;
 
 function moveBurgerNav() {
   body.classList.toggle("body-burger");
@@ -463,3 +467,27 @@ if (pageType === "gifts") {
     }
   };
 }
+
+function moveToRight() {
+  if (sliderStep === 0) {
+    sliderLeftButton.classList.remove("inactive");
+    sliderLeftButton.classList.add("chosen");
+  }
+  sliderStep++;
+  if (sliderStep === 3) {
+    sliderRightButton.classList.add("inactive");
+    sliderRightButton.classList.remove("chosen");
+  }
+
+  const sliderContainer = document.querySelector(".slider-container");
+  const sliderShift = Math.round(2000 - sliderContainer.offsetWidth) / 3;
+  sliderPosition += sliderShift;
+  showScrollBtn;
+  sliderContainer.style.transform = `translateX(-${sliderPosition}px)`;
+}
+
+sliderRightButton.addEventListener("click", moveToRight);
+
+sliderLeftButton.addEventListener("click", () => {
+  console.log(1);
+});

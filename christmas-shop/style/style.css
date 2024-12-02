@@ -229,6 +229,7 @@ h2 {
   height: 200px;
   margin-left: 82px;
   margin-top: 20px;
+  transition: 2s;
 }
 
 .slider-item {
