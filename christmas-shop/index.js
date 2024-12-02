@@ -473,7 +473,7 @@ function moveToRight() {
     sliderLeftButton.classList.remove("inactive");
     sliderLeftButton.classList.add("chosen");
   }
-  sliderStep++;
+  if (sliderStep < 3) sliderStep++;
   if (sliderStep === 3) {
     sliderRightButton.classList.add("inactive");
     sliderRightButton.classList.remove("chosen");
@@ -482,12 +482,25 @@ function moveToRight() {
   const sliderContainer = document.querySelector(".slider-container");
   const sliderShift = Math.round(2000 - sliderContainer.offsetWidth) / 3;
   sliderPosition += sliderShift;
-  showScrollBtn;
+  sliderContainer.style.transform = `translateX(-${sliderPosition}px)`;
+}
+
+function moveToLeft() {
+  if (sliderStep === 3) {
+    sliderRightButton.classList.remove("inactive");
+    sliderRightButton.classList.add("chosen");
+  }
+  if (sliderStep > 0) sliderStep--;
+  if (sliderStep === 0) {
+    sliderLeftButton.classList.add("inactive");
+    sliderLeftButton.classList.remove("chosen");
+  }
+  const sliderContainer = document.querySelector(".slider-container");
+  const sliderShift = Math.round(2000 - sliderContainer.offsetWidth) / 3;
+  sliderPosition -= sliderShift;
   sliderContainer.style.transform = `translateX(-${sliderPosition}px)`;
 }
 
 sliderRightButton.addEventListener("click", moveToRight);
 
-sliderLeftButton.addEventListener("click", () => {
-  console.log(1);
-});
+sliderLeftButton.addEventListener("click", moveToLeft);
