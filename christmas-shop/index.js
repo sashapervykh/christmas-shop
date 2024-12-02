@@ -471,24 +471,30 @@ if (pageType === "gifts") {
 }
 
 function moveToRight() {
+  const maxSliderStep = window.innerWidth > 768 ? 3 : 6;
+
   if (sliderStep === 0) {
     sliderLeftButton.classList.remove("inactive");
     sliderLeftButton.classList.add("chosen");
   }
-  if (sliderStep < 3) sliderStep++;
-  if (sliderStep === 3) {
+  if (sliderStep < maxSliderStep) sliderStep++;
+  if (sliderStep === maxSliderStep) {
     sliderRightButton.classList.add("inactive");
     sliderRightButton.classList.remove("chosen");
   }
 
   const sliderContainer = document.querySelector(".slider-container");
-  const sliderShift = Math.round(2000 - sliderContainer.offsetWidth) / 3;
+  const sliderShift = Math.round(
+    (2000 - sliderContainer.offsetWidth) / maxSliderStep
+  );
   sliderPosition += sliderShift;
   sliderContainer.style.transform = `translateX(-${sliderPosition}px)`;
 }
 
 function moveToLeft() {
-  if (sliderStep === 3) {
+  const maxSliderStep = window.innerWidth > 768 ? 3 : 6;
+
+  if (sliderStep === maxSliderStep) {
     sliderRightButton.classList.remove("inactive");
     sliderRightButton.classList.add("chosen");
   }
@@ -498,7 +504,9 @@ function moveToLeft() {
     sliderLeftButton.classList.remove("chosen");
   }
   const sliderContainer = document.querySelector(".slider-container");
-  const sliderShift = Math.round(2000 - sliderContainer.offsetWidth) / 3;
+  const sliderShift = Math.round(
+    (2000 - sliderContainer.offsetWidth) / maxSliderStep
+  );
   sliderPosition -= sliderShift;
   sliderContainer.style.transform = `translateX(-${sliderPosition}px)`;
 }
