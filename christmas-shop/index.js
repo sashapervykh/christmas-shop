@@ -22,8 +22,8 @@ function moveBurgerNav() {
 
 function calcTimeToNewYear() {
   const now = new Date();
-  const NewYear = new Date("2025-01-01");
-  NewYear.setUTCFullYear(2025, 0, 1);
+  const NewYear = new Date("2026-01-01");
+  NewYear.setUTCFullYear(2026, 0, 1);
   const timeRemainder = NewYear - now;
   const result = { days: 0, hours: 0, min: 0, sec: 0 };
   result.days = Math.floor(timeRemainder / 1000 / 60 / 60 / 24);
